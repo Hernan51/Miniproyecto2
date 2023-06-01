@@ -2,6 +2,8 @@ import { Component,OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import 'firebase/firestore';
 
 const DATOS_STORAGE_KEY = 'datosGuardados';
 
@@ -14,7 +16,7 @@ const DATOS_STORAGE_KEY = 'datosGuardados';
 
 export class ReservasComponent implements OnInit {
 
-  constructor(private toastr: ToastrService) {}
+  constructor(private toastr: ToastrService,private firestore: AngularFirestore) {}
 
   title: 'miniproyecto2' | undefined;
   nombre: any;
@@ -58,6 +60,14 @@ export class ReservasComponent implements OnInit {
       const historial = JSON.parse(datosGuardados);
       historial.push(datos);
       localStorage.setItem(DATOS_STORAGE_KEY, JSON.stringify(historial));
+      this.firestore.collection('datos').add(datos)
+      .then(() => {
+        console.log('Datos guardados en Firestore');
+        // Puedes realizar alguna acción adicional después de guardar los datos
+      })
+      .catch((error: any) => {
+        console.error('Error al guardar los datos:', error);
+      });
     } else {
       localStorage.setItem(DATOS_STORAGE_KEY, JSON.stringify([datos]));
     }
