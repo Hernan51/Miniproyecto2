@@ -53,7 +53,7 @@ export class ReservasComponent implements OnInit {
       Swal.fire('Ya hay reservacion a esa hora')
       return;
     }else{
-      Swal.fire('Reservación Confirmada');
+      Swal.fire('Producto agregado con exito');
     // Guardar los datos en localStorage
     const datosGuardados = localStorage.getItem(DATOS_STORAGE_KEY);
     if (datosGuardados) {
