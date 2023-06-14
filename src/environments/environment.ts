@@ -8,14 +8,13 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const environment = {
   firebase: {
-    projectId: 'loginproyecto-66d77',
-    appId: '1:946486542751:web:cb108954f0b3e8e5adbdaa',
-    databaseURL: 'https://loginproyecto-66d77-default-rtdb.firebaseio.com',
-    storageBucket: 'loginproyecto-66d77.appspot.com',
-    apiKey: 'AIzaSyDaLgrqmAn1OhRZ-pjCBIlgQxjyjG63CCQ',
-    authDomain: 'loginproyecto-66d77.firebaseapp.com',
-    messagingSenderId: '946486542751',
-    measurementId: 'G-PRW6QBX559',
+    projectId: 'analisis-de-datos-8e55c',
+    appId: '1:746068536198:web:f152764299fb1518fd1a07',
+    databaseURL: 'https://analisis-de-datos-8e55c-default-rtdb.firebaseio.com',
+    storageBucket: 'analisis-de-datos-8e55c.appspot.com',
+    apiKey: 'AIzaSyADw0D-MHAcICa0XuSnrfsJSAWhoykkuSg',
+    authDomain: 'analisis-de-datos-8e55c.firebaseapp.com',
+    messagingSenderId: '746068536198',
   }
 };
 

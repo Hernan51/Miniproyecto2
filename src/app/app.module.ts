@@ -35,6 +35,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { DomsegurpPipe } from './acerca/domsegurp.pipe';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { ProductListComponent } from './product-list/product-list.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { AddEmpleadosComponent } from './add-empleados/add-empleados.component';
+import { EmpleadoListComponent } from './empleado-list/empleado-list.component';
+
 
 
 
@@ -53,6 +58,10 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     AcercaComponent,
     GaleriaComponent,
     DomsegurpPipe,
+    ProductListComponent,
+    AddProductComponent,
+    AddEmpleadosComponent,
+    EmpleadoListComponent,
 
 
   ],
