@@ -25,25 +25,30 @@
 <div class="login-box" [ngStyle]="{'background-color':'#fff', 'color':'black'}">
   <h2>Reservaciones</h2>
   <form (submit)="guardarDatos()">
-    <div class="user-box">
-      <input type="text" [(ngModel)]="nombre" name="dato1" required>
-      <label>Nombre</label>
+
+      <div class="coolinput mb-3 text-center">
+        <label for="input" class="text">Nombre:</label>
+        <input type="text" [(ngModel)]="nombre" name="dato1" class="input">
+      </div>
+
+      <div class="coolinput mb-3 text-center">
+        <label for="input" class="text">Teléfono:</label>
+        <input type="text" [(ngModel)]="telefono" name="dato2" class="input">
+      </div>
+
+    <div class="coolinput mb-3 text-center">
+        <label for="input" class="text">Email:</label>
+        <input type="text" [(ngModel)]="email" name="dato3" class="input">
+      </div>
+
+    <div class="coolinput mb-3 text-center">
+      <label for="input" class="text">Fecha:</label>
+      <input type="date" [(ngModel)]="fecha" name="dato4" id="date" class="input" required>
     </div>
-    <div class="user-box">
-      <input type="text" [(ngModel)]="telefono" name="dato2" required>
-      <label>Teléfono</label>
-    </div>
-    <div class="user-box">
-      <input type="text" [(ngModel)]="email" name="dato3" required>
-      <label>Email</label>
-    </div>
-    <div class="user-box">
-      <input type="date" [(ngModel)]="fecha" name="dato4" id="date" required>
-      <label>Fecha</label>
-    </div>
-    <div class="user-box">
-      <input type="time" [(ngModel)]="hora" name="dato5" id="time" required>
-      <label>Hora</label>
+
+    <div class="coolinput mb-3 text-center">
+      <label for="input" class="text">Hora:</label>
+      <input type="time" [(ngModel)]="hora" name="dato5" id="time" class="input" required>
     </div>
 
       <button type="submit" class="btn btn-light">Reservar</button>
